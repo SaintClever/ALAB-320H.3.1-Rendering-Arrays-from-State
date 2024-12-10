@@ -1,10 +1,10 @@
 function Score({ score }) {
   return (
-    <div className="score">
-      <p>Date: {score.date}</p>
-      <p>Score: {score.score}</p>
-    </div>
+    <li>
+      Date: {score.date} | Score: {score.score}
+    </li>
   );
 }
+
 
 export { Score };

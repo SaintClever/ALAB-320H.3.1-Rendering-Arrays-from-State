@@ -67,7 +67,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div>
       {learnerData.learners.map((learner, index) => (
         <Learner key={index} learner={learner} />
       ))}
