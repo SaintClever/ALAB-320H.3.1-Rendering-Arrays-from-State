@@ -64,17 +64,15 @@ function App() {
       }
     ]
   })
-  
-  console.log(learnerData);
+
+
   return (
-    <>
-    {
-      learnerData.learners.map(leaner => (
-        <Learner name={leaner.name} bio={leaner.bio} scores={leaner.scores.date} />
-      ))
-    }
-    </>
-  )
+    <div className="App">
+      {learnerData.learners.map((learner, index) => (
+        <Learner key={index} learner={learner} />
+      ))}
+    </div>
+  );
 }
 
-export { App }
+export { App };

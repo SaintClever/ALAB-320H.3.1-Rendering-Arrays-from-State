@@ -1,14 +1,17 @@
-let Learner = ({ name, bio, scores }) => {
+import { Score } from './Score';
 
+function Learner({ learner }) {
   return (
-    <>
-      <h1>{name}</h1>
-      <p>{bio}</p>
-      <ul>
-        <li>{scores}</li>
-      </ul>
-    </>
-  )
+    <div className="learner">
+      <h2>{learner.name}</h2>
+      <p>{learner.bio}</p>
+      <div className="scores">
+        {learner.scores.map((score, index) => (
+          <Score key={index} score={score} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export { Learner };
